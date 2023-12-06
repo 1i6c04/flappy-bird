@@ -36,11 +36,11 @@ window.onload = () => {
     ctx = canvas.getContext('2d')
 
     bird_upflap_img = new Image();
-    bird_upflap_img.src = "./../resources/sprites/bluebird-upflap.png";
+    bird_upflap_img.src = "./resources/sprites/bluebird-upflap.png";
     bird_img = new Image();
-    bird_img.src = "./../resources/sprites/bluebird-midflap.png";
+    bird_img.src = "./resources/sprites/bluebird-midflap.png";
     bird_down_flap_img = new Image();
-    bird_down_flap_img.src = "./../resources/sprites/bluebird-downflap.png";
+    bird_down_flap_img.src = "./resources/sprites/bluebird-downflap.png";
 
     birdFlaps.push(bird_upflap_img);
     birdFlaps.push(bird_img);
@@ -50,16 +50,16 @@ window.onload = () => {
     }, 50);
 
     base_img = new Image();
-    base_img.src = "./../resources/sprites/base.png";
+    base_img.src = "./resources/sprites/base.png";
     base_img.onload = () => {
         ctx.drawImage(base_img, base.x, base.y, base.width, base.height)
     }
 
     pipe_img = new Image();
-    pipe_img.src = "./../resources/sprites/pipe-green.png";
+    pipe_img.src = "./resources/sprites/pipe-green.png";
 
     pipe_img_reverse = new Image();
-    pipe_img_reverse.src = "./../resources/sprites/pipe-green-reverse.png";
+    pipe_img_reverse.src = "./resources/sprites/pipe-green-reverse.png";
 
     setInterval(() => {
         const bottomRandomHeight = Math.random() * 100
@@ -133,16 +133,16 @@ function animate() {
     // }
     if (game_over) {
         const game_over_img = new Image();
-        game_over_img.src = "../resources/sprites/gameover.png";
+        game_over_img.src = "./resources/sprites/gameover.png";
         game_over_img.onload = () => {
             ctx.drawImage(game_over_img, (canvasWidth-192)/2 , (canvasHeight-42)/2, 192, 42);
         }
         const start_img = new Image();
-        start_img.src = "../resources/sprites/start.png";
+        start_img.src = "./resources/sprites/start.png";
         start_img.onload = () => {
             ctx.drawImage(start_img, (canvasWidth-100)/2 , (canvasHeight-37)/1.5, 100, 37);
         }
-        birdFlap();
+        // birdFlap();
         return;
     }
     ctx.clearRect(0, 0, canvasWidth, canvasHeight);
