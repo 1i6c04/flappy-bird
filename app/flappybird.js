@@ -1,4 +1,4 @@
-let canvasWidth = 336
+let canvasWidth = 425
 let canvasHeight = 512
 let bird = {
     width: 34,
